@@ -14,7 +14,7 @@ jobs:
           name: Run tests
           command: python -m pytest
       - persist_to_workspace:
-          root: ~/project
+          root: ~/iterateoverpandas
           paths:
             - .
 
