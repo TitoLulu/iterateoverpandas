@@ -8,15 +8,8 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
-      - run:
-          name: Run tests
-          command: python -m pytest
-      - persist_to_workspace:
-          root: ~/iterateoverpandas
-          paths:
-            - .
+      - python/install-deps
+      - python/test
 
 workflows:
   test_my_app:
